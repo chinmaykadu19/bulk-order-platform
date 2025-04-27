@@ -1,6 +1,14 @@
 // For Next.js 13+ with TailwindCSS (app/page.tsx)
 
 import Link from 'next/link';
+export default function Home() {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+      <h1>Welcome to Bulk Order Platform!</h1>
+      <p>Site deployed successfully 🚀</p>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
