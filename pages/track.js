@@ -1,23 +1,12 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import React from 'react';
-
-export default function TrackPage() {
-  return (
-    <div>
-      <h1>Track Your Order</h1>
-      <p>Tracking details will be shown here.</p>
-    </div>
-  );
-}
-
+import React, { useState } from 'react';
 
 export default function TrackOrder() {
   const [status, setStatus] = useState(null);
   const [orderId, setOrderId] = useState("");
 
   const handleLookup = () => {
-    // Simulate fetch
+    // Simulate fetch or order tracking lookup
     setStatus("In Progress");
   };
 
@@ -31,9 +20,13 @@ export default function TrackOrder() {
         onChange={(e) => setOrderId(e.target.value)}
         className="w-full p-2 border border-gray-300 rounded mb-4"
       />
-      <button onClick={handleLookup} className="w-full bg-blue-600 text-white p-2 rounded">
+      <button
+        onClick={handleLookup}
+        className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+      >
         Lookup
       </button>
+
       {status && (
         <motion.div
           className="mt-6 p-4 bg-gray-100 rounded shadow"
